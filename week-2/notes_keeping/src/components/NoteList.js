@@ -1,6 +1,7 @@
 import React from 'react';
 import Note from './Note';
 import NoteForm from './NoteForm';
+
 import { Container, Row, Col } from 'react-bootstrap';
 
 function NoteList({ notes, setNotes }) {
@@ -14,7 +15,7 @@ function NoteList({ notes, setNotes }) {
   };
 
   return (
-    <Container>
+    <Container fluid>
       <Row>
         <Col>
           <NoteForm addNote={addNote} />

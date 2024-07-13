@@ -1,5 +1,6 @@
 .App {
     text-align: center;
+    height: 100vh;
   }
   
   .note {
@@ -13,5 +14,6 @@
   .dark-mode {
     background-color: #121212;
     color: white;
+    padding: 0 0;
   }
   
