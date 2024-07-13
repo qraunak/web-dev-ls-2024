@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 
-function NoteForm({ addNote }) {
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
+function NoteForm({ addNote, title, setTitle, content, setContent }) {
+  // const [title, setTitle] = useState('');
+  // const [content, setContent] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();

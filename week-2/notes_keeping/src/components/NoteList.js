@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Note from './Note';
 import NoteForm from './NoteForm';
 
@@ -14,17 +14,26 @@ function NoteList({ notes, setNotes }) {
     setNotes(newNotes);
   };
 
+  const [title, setTitle] = useState('');
+  const [content, setContent] = useState('');
+
+  const handleEdit = (index) => {
+    setTitle(notes[index].title);
+    setContent(notes[index].content);
+    handleDelete(index);
+  }
+
   return (
     <Container fluid>
       <Row>
         <Col>
-          <NoteForm addNote={addNote} />
+          <NoteForm addNote={addNote} title={title} setTitle={setTitle} setContent={setContent} content = {content}/>
         </Col>
       </Row>
       <Row>
         {notes.map((note, index) => (
           <Col key={index} xs={12} md={4}>
-            <Note note={note} index={index} handleDelete={handleDelete} />
+            <Note note={note} index={index} handleDelete={handleDelete} handleEdit ={handleEdit}/>
           </Col>
         ))}
       </Row>
