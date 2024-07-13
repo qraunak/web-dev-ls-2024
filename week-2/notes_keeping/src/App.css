@@ -1,0 +1,17 @@
+.App {
+    text-align: center;
+  }
+  
+  .note {
+    margin: 10px;
+  }
+  
+  .note-form {
+    margin: 20px 0;
+  }
+  
+  .dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+  
