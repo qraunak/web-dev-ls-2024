@@ -61,6 +61,8 @@ Go to http://127.0.0.1:8000/admin/ to access the Django admin site. Log in using
 
 ## Additional Notes
 ### Project Structure
- auth_project/: Contains the project settings and configuration.\
-tweet/: Contains the application code for managing tweets.\
-templates/: Contains HTML templates for rendering views.\
+<ul>
+<li>auth_project/: Contains the project settings and configuration.</li>
+<li>tweet/: Contains the application code for managing tweets.</li>
+<li>templates/: Contains HTML templates for rendering views.</li>
+</ul>
