@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container text-center mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+                <div class="card-body">
+                    <h2 class="card-title text-danger">Logged Out</h2>
+                    <p class="card-text">
+                        You are now logged out.
+                    </p>
+                    <a href="{% url 'login' %}" class="btn btn-primary mt-3">
+                        Please Login Here!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
