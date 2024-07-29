@@ -1,21 +1,26 @@
-
 {% extends "layout.html" %}
+{% load static %}
+
 {% block title %}
 Tweet
 {% endblock %}
+
 {% block content %}
-<h1 class="text-center text-white"></h1>
-<h2 class="text-white">
-    {% if form.instance.pk %}
-    Edit Tweet
-    {% else %}
-    Create a new Tweet
-    {% endif %}
-    <form method="post" enctype="multipart/form-data" class="form">
-        {% csrf_token %}
-        {{ form.as_p}}
-    <button type="submit" class="btn btn-danger">Submit</button>
-    <a href="{% url 'tweet_list' %}">Back to Tweet List</a>
-    </form>
-</h2>
+<div class="container mt-5">
+    <h1 class="text-center text-primary">{% if form.instance.pk %} Edit Tweet {% else %} Create a New Tweet {% endif %}</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg p-4">
+                <form method="post" enctype="multipart/form-data" class="form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="d-flex justify-content-between mt-4">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <a href="{% url 'tweet_list' %}" class="text-black ">Back to Tweet List</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
